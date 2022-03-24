@@ -1,0 +1,130 @@
+{
+    "Protokollkopf": [
+      {
+        "Standortkennung": "BY4132",
+        "Standortname": "Golßen/Staakow 99",
+        "Straße": "Dorfstraße, Gem. Staakow, Flur 3, Fst. 100",
+        "PLZ": "15910",
+        "Ort": "Rietzneuendorf/Staakow",
+        "Messmittel": "Anritsu Sitemaster S331E",
+        "Messdatum": "25.08.2016",
+        "Aufbaufirma": "Europoles RMP",
+        "Name": "Fuß",
+        "Datum": "28.06.2016",
+        "Band": "UMTS",
+        "Konf": "2T2R",
+        "ProtokollID": "0001"
+      },
+      {
+        "Standortkennung": "SY3102 - 1911163",
+        "Standortname": "S-City G-Müller-Platz",
+        "Straße": "G-Müller-Platz; Gemkng.: Stuttgart; Fl.Stk.: 1315",
+        "PLZ": "70173",
+        "Ort": "Stuttgart",
+        "Messmittel": "Anritsu S331E",
+        "Messdatum": "27.11.2020",
+        "Aufbaufirma": "ZECH Technik Austria GmbH",
+        "Name": "Antonio Iaia (SD) UMTS",
+        "Datum": "12.01.2021",
+        "Band": "2100",
+        "Konf": "2T2R",
+        "ProtokollID": "0002"
+      }
+    ],
+    "Antenne": [
+      {
+        "Hauptstrahlrichtung": "",
+        "Frequenzband": "",
+        "Antennenhersteller": "Huawei",
+        "Antennentyp": "",
+        "Seriennummer": "I0J0578720",
+        "Antennenport": "Lr1",
+        "Polarisation": "+45°",
+        "Absenkung elektrisch(RET)": "",
+        "Absenkung mechanisch": "",
+        "Schwerpunkthöhe": "",
+        "Tageskennzeichnung": "",
+        "Antennenfarbe": "",
+        "AntenneID": "0001",
+        "Sector":"1",
+        "ProtokollID": "0001"
+      },
+      {
+        "Hauptstrahlrichtung": "",
+        "Frequenzband": "",
+        "Antennenhersteller": "Huawei",
+        "Antennentyp": "",
+        "Seriennummer": "I0J0578768",
+        "Antennenport": "Lr1",
+        "Polarisation": "-45°",
+        "Absenkung elektrisch(RET)": "",
+        "Absenkung mechanisch": "",
+        "Schwerpunkthöhe": "",
+        "Tageskennzeichnung": "",
+        "Antennenfarbe": "",
+        "AntenneID": "0002",
+        "Sector":"2",
+        "ProtokollID": "0001"
+      }
+    ],
+    "RET": [
+      {
+        "RET Hersteller-bezeichnung": "Integriertes RET",
+        "RET Seriennummer": "HWM2482KC008H072Lr1",
+        "RET Beschaltung": "",
+        "RET Kabellänge": "1025cm",
+        "BiasT Hersteller-bezeichnung": "",
+        "BiasT Seriennummer": "",
+        "Connectortyp": "",
+        "RETID": "0001",
+        "ProtokollID": "0001"
+      },
+      {
+        "RET Hersteller-bezeichnung": "Integriertes RET",
+        "RET Seriennummer": "HWM2482KC008H072Lr2",
+        "RET Beschaltung": "",
+        "RET Kabellänge": "1025cm",
+        "BiasT Hersteller-bezeichnung": "",
+        "BiasT Seriennummer": "",
+        "Connectortyp": "",
+        "RETID": "0001",
+        "ProtokollID": "0001"
+      }
+    ],
+    "Zuleitung": [
+      {
+        "Name": "Jumper",
+        "Länge in cm": "",
+        "Connectortyp": "",
+        "ID": "",
+        "ProtokollID": ""
+      },
+      {
+        "Name": "Feeder",
+        "Längeincm": "",
+        "Connectortyp": "",
+        "ID": "",
+        "ProtokollID": ""
+      },
+      {
+        "Name": "Jumper",
+        "Längeincm": "",
+        "Connectortyp": "",
+        "ID": "",
+        "ProtokollID": ""
+      }
+    ],
+    "Port": [
+      {
+        "Radioport": "",
+        "Radiohersteller": "",
+        "Radiotyp": "",
+        "Seriennummer(Radio)": "",
+        "ID": "",
+        "ProtokollID": ""
+      }
+    ],
+    "Protokollitemsfiltered": [],
+    "Antennafiltered": [],
+    "Retfiltered": []
+  }

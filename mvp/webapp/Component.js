@@ -1,9 +1,10 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "mvp/model/models"
+        "mvp/model/models",
+        'sap/ui/model/json/JSONModel'
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models, JSONModel) {
         "use strict";
 
         return UIComponent.extend("mvp.Component", {
@@ -25,6 +26,9 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                let oProtocolsModel = new JSONModel(sap.ui.require.toUrl("mvp/protocol.json"));
+                this.setModel(oProtocolsModel, "local");
             }
         });
     }

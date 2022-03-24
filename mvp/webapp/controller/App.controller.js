@@ -9,7 +9,7 @@ sap.ui.define([
 
         return Controller.extend("mvp.controller.App", {
             onInit: function () {
-
             }
+
         });
     });

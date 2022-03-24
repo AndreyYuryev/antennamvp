@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="mvp.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+<Page 
+    id="idListPage" 
+    title="{i18n>ListTitle}">
+    <content>
+        <Table 
+            id="idListTable"
+            items="{local>/Protokollkopf}"
+        >
+            <columns>
+                <Column 
+                    hAlign="Left">
+                    <Text text="{i18n>ListCol1}"/>
+                </Column>
+               <Column 
+                 hAlign="Left">
+                <Text text="{i18n>ListCol2}"/>
+                </Column>
+               <Column 
+                 hAlign="Left">
+                <Text text="{i18n>ListCol3}"/>
+                </Column>
+                <Column/>
+            </columns>
+            <items>
+                <ColumnListItem 
+                    vAlign="Inherit"
+                    type="Navigation"
+                    press="onItemsPress">
+                    <cells>
+                        <ObjectIdentifier text="{local>Standortname}"/>
+                        <ObjectIdentifier text="{local>Standortkennung}"/>
+                        <ObjectIdentifier text="{local>Datum}"/>
+                        <ObjectIdentifier text=""/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </content>
+</Page>
+</mvc:View>

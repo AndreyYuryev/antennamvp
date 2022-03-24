@@ -1,5 +1,5 @@
 {
-  "_version": "1.20.0",
+  "_version": "1.17.0",
   "sap.app": {
     "id": "mvp",
     "type": "application",
@@ -40,7 +40,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.76.1",
+      "minUI5Version": "1.71.46",
       "libs": {
         "sap.ui.core": {}
       }
@@ -88,9 +88,23 @@
       "routes": [
         {
           "name": "RouteApp",
-          "pattern": "RouteApp",
+          "pattern": "",
           "target": [
             "TargetApp"
+          ]
+        },
+        {
+          "name": "RouteProtocol",
+          "pattern": "protocol/{protokolid}",
+          "target": [
+            "TargetProtocol"
+          ]
+        },
+        {
+          "name": "RouteAntenna",
+          "pattern": "protocol/{protokolid}/antenna/{antennaid}",
+          "target": [
+            "TargetAntenna"
           ]
         }
       ],
@@ -99,9 +113,24 @@
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "App",
-          "viewName": "App"
+          "viewId": "List",
+          "viewName": "List"
+        },
+        "TargetProtocol": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Protocol",
+          "viewName": "Protocol"
+        },
+        "TargetAntenna": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Antenna",
+          "viewName": "Antenna"
         }
+
       }
     },
     "rootView": {

@@ -1,0 +1,239 @@
+<mvc:View xmlns:uxap="sap.uxap"
+    controllerName="mvp.controller.Protocol"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <Page 
+        id="idProtocolPage" 
+        title="{i18n>ProtocolTitle}"
+        showNavButton="true"
+	    navButtonPress="onNavBack">
+        <content>
+        <!-- head info -->
+            <f:Form id="idProtocolForm" 
+                    editable="false">
+                <f:title>
+                    <core:Title text="{i18n>FormProtocolTitle} {local>/Protokollitemsfiltered/0/Datum}"/>
+                </f:title>
+                <f:layout>
+                    <f:ResponsiveGridLayout 
+                        labelSpanXL="4"
+                        labelSpanL="4"
+                        labelSpanM="4"
+                        labelSpanS="8"
+                        adjustLabelSpan="true"
+                        emptySpanXL="0"
+                        emptySpanL="0"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="2"
+                        columnsL="2"
+                        columnsM="1"
+                        singleContainerFullSize="false"/>
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer >
+                        <f:formElements>
+                            <f:FormElement label="{i18n>PrtclfldL1}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Standortkennung}" id="idfldL1"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldL2}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Standortname}" id="idfldL2"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldL3}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Straße}" id="idfldL3"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldL4}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/PLZ} / {local>/Protokollitemsfiltered/0/Ort}" id="idfldL4"/>
+                                </f:fields>
+                            </f:FormElement>                            
+                        </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer >
+                        <f:formElements>
+                            <f:FormElement label="{i18n>PrtclfldR1}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Messmittel}" id="idfldR1"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldR2}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Messdatum}" id="idfldR2"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldR3}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Aufbaufirma}" id="idfldR3"/>
+                                </f:fields>
+                            </f:FormElement>                     
+                            <f:FormElement label="{i18n>PrtclfldR4}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Name}" id="idfldR4"/>
+                                </f:fields>
+                            </f:FormElement>                                   
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+                <f:formContainers>
+                    <f:FormContainer >
+                        <f:formElements>
+                            <f:FormElement label="{i18n>PrtclfldB1}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Band}" id="idfldB1"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldB2}">
+                                <f:fields>
+                                    <Text text="{local>/Protokollitemsfiltered/0/Konf}" id="idfldB2"/>
+                                </f:fields>
+                            </f:FormElement>                            
+                        </f:formElements>
+                    </f:FormContainer>                
+                </f:formContainers>
+            </f:Form>
+
+            <Table 
+                id="idAntenneTable"
+                items="{local>/Antennafiltered}"
+                >
+                <columns>
+                    <Column 
+                        hAlign="Left">
+                        <Text text="{i18n>AntennaCol1}"/>
+                    </Column>
+                    <Column 
+                        hAlign="Left">
+                        <Text text="{i18n>AntennaCol2}"/>
+                    </Column>
+                    <Column 
+                        hAlign="Left">
+                        <Text text="{i18n>AntennaCol3}"/>
+                    </Column>     
+                    <Column 
+                        hAlign="Left">
+                        <Text text="{i18n>AntennaCol4}"/>
+                    </Column>                                    
+                </columns>
+                <items>
+                    <ColumnListItem 
+                        vAlign="Inherit"
+                        type="Navigation"
+                        press="onItemsPress">
+                        <cells>
+                            <ObjectIdentifier text="{local>Sector}"/>                        
+                            <ObjectIdentifier text="{local>Antennenhersteller}"/>
+                            <ObjectIdentifier text="{local>Seriennummer}"/>
+                            <ObjectIdentifier text="{local>Polarisation}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+    <!--        <uxap:ObjectPageLayout id="ObjPGLid">
+                <uxap:headerTitle>
+                    <uxap:ObjectPageDynamicHeaderTitle >
+                	<uxap:actions>
+					    <Button text="Edit" type="Emphasized"/>
+					    <Button text="Exit"/>
+				    </uxap:actions>
+                    </uxap:ObjectPageDynamicHeaderTitle>
+                </uxap:headerTitle>
+                <uxap:headerContent>
+                    <ObjectAttribute title="Standortkennung" text="{local>/Protokollitemsfiltered/0/Standortkennung}" />
+					<ObjectAttribute title="Standortname" text="{local>/Protokollitemsfiltered/0/Standortname}" />
+                </uxap:headerContent>
+                <uxap:sections>
+                    <uxap:ObjectPageSection title="Antenna">
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection>
+                                <uxap:blocks>
+                                    <Table
+                                        id="suppliersTable"
+                                        mode="SingleSelectMaster"
+                                        itemPress=""
+                                        items="{local>/Antennefiltered}">
+                                        <columns>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="Polarisation"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="Antennenport"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="Antennenhersteller"/>
+                                            </Column>
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem type="Navigation">
+                                                <cells>
+                                                    <ObjectIdentifier text="{local>Polarisation}" />
+                                                    <ObjectIdentifier text="{local>Antennenport}" />
+                                                    <ObjectIdentifier text="{local>Antennenhersteller}" />
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                    <uxap:ObjectPageSection title="RET">
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection>
+                                <uxap:blocks>
+                                    <Table
+                                        id="suppliersTable2"
+                                        mode="SingleSelectMaster"
+                                        itemPress=""
+                                        items="{local>/Retfiltered}">
+                                        <columns>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Seriennummer"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Hersteller-bezeichnung"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Kabellänge"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Beschaltung"/> 
+                                            </Column>					
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem type="Navigation">
+                                                <cells>
+                                                    <ObjectIdentifier text="{local>RET Seriennummer}" />
+                                                    <ObjectIdentifier text="{local>RET Hersteller-bezeichnung}" />
+                                                    <ObjectIdentifier text="{local>RET Kabellänge}" />
+                                                    <Input value="{local>RET Beschaltung}"/>
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>                    
+                </uxap:sections>
+            </uxap:ObjectPageLayout>     
+              -->
+        </content>
+    </Page>
+</mvc:View>
