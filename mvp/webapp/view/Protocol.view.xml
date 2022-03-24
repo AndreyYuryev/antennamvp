@@ -138,7 +138,7 @@
                     </ColumnListItem>
                 </items>
             </Table>
-    <!--        <uxap:ObjectPageLayout id="ObjPGLid">
+            <uxap:ObjectPageLayout id="ObjPGLid">
                 <uxap:headerTitle>
                     <uxap:ObjectPageDynamicHeaderTitle >
                 	<uxap:actions>
@@ -233,7 +233,7 @@
                     </uxap:ObjectPageSection>                    
                 </uxap:sections>
             </uxap:ObjectPageLayout>     
-              -->
+              
         </content>
     </Page>
 </mvc:View>
