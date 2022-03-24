@@ -12,6 +12,7 @@
         showNavButton="true"
 	    navButtonPress="onNavBack">
         <content>
+<!--
             <f:Form 
                 id="idAntennaForm"
                 editable="true">
@@ -61,6 +62,204 @@
                     </f:FormContainer>
                 </f:formContainers>                
             </f:Form>
+-->
+
+<!---->
+            <uxap:ObjectPageLayout id="ObjPGLid">
+                <uxap:headerTitle>
+                    <uxap:ObjectPageDynamicHeaderTitle >
+                	<uxap:actions>
+					    <Button text="Edit" type="Emphasized"/>
+					    <Button text="Exit"/>
+				    </uxap:actions>
+                    </uxap:ObjectPageDynamicHeaderTitle>
+                </uxap:headerTitle>
+                <uxap:headerContent>
+                    <ObjectAttribute title="Standortkennung" text="{local>/Protokollitemsfiltered/0/Standortkennung}" />
+					<ObjectAttribute title="Standortname" text="{local>/Protokollitemsfiltered/0/Standortname}" />
+
+
+                </uxap:headerContent>
+
+                <uxap:sections>
+                    <uxap:ObjectPageSection title="Antenna">
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection>
+                                <uxap:blocks>
+                                    <f:Form 
+                                        id="idAntennaForm"
+                                        editable="true">
+                                        <f:title>
+                                            <core:Title text="{i18n>FormAntennaTitle}"/>
+                                        </f:title>
+                                        <f:layout>
+                                            <f:ResponsiveGridLayout 
+                                                labelSpanXL="4"
+                                                labelSpanL="4"
+                                                labelSpanM="4"
+                                                labelSpanS="8"
+                                                adjustLabelSpan="true"
+                                                emptySpanXL="0"
+                                                emptySpanL="0"
+                                                emptySpanM="0"
+                                                emptySpanS="0"
+                                                columnsXL="2"
+                                                columnsL="2"
+                                                columnsM="1"
+                                                singleContainerFullSize="false"/>
+                                        </f:layout>
+                                        <f:formContainers>
+                                            <f:FormContainer >
+                                                <f:formElements>
+                                                    <f:FormElement label="{i18n>Antnfld1}" >
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Antennenhersteller}" id="idfld1"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld2}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Seriennummer}" id="idfld2"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld3}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Antennenport}" id="idfld3"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld4}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Polarisation}" id="idfld4"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                </f:formElements>
+                                            </f:FormContainer>
+                                        </f:formContainers>                
+                                    </f:Form>
+                                <!--
+                                    <Table
+                                        id="suppliersTable"
+                                        mode="SingleSelectMaster"
+                                        itemPress=""
+                                        items="{local>/Antennefiltered}">
+                                        <columns>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="Polarisation"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="Antennenport"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="Antennenhersteller"/>
+                                            </Column>
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem type="Navigation">
+                                                <cells>
+                                                    <ObjectIdentifier text="{local>Polarisation}" />
+                                                    <ObjectIdentifier text="{local>Antennenport}" />
+                                                    <ObjectIdentifier text="{local>Antennenhersteller}" />
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                    -->
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                    <uxap:ObjectPageSection title="RET">
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection>
+                                <uxap:blocks>
+                                    <Table
+                                        id="suppliersTable2"
+                                        mode="SingleSelectMaster"
+                                        itemPress=""
+                                        items="{local>/Retfiltered}">
+                                        <columns>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Seriennummer"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Hersteller-bezeichnung"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Kabellänge"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Beschaltung"/> 
+                                            </Column>					
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem type="Navigation">
+                                                <cells>
+                                                    <ObjectIdentifier text="{local>RET Seriennummer}" />
+                                                    <ObjectIdentifier text="{local>RET Hersteller-bezeichnung}" />
+                                                    <ObjectIdentifier text="{local>RET Kabellänge}" />
+                                                    <Input value="{local>RET Beschaltung}"/>
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>                    
+
+                     <uxap:ObjectPageSection title="Zuleitung">
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection>
+                                <uxap:blocks>
+                                    <Table
+                                        id="suppliersTable3"
+                                        mode="SingleSelectMaster"
+                                        itemPress=""
+                                        items="{local>/Retfiltered}">
+                                        <columns>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Seriennummer"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Hersteller-bezeichnung"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Kabellänge"/>
+                                            </Column>
+                                            <Column 
+                                                hAlign="Left">
+                                                <Text text="RET Beschaltung"/> 
+                                            </Column>					
+                                        </columns>
+                                        <items>
+                                            <ColumnListItem type="Navigation">
+                                                <cells>
+                                                    <ObjectIdentifier text="{local>RET Seriennummer}" />
+                                                    <ObjectIdentifier text="{local>RET Hersteller-bezeichnung}" />
+                                                    <ObjectIdentifier text="{local>RET Kabellänge}" />
+                                                    <Input value="{local>RET Beschaltung}"/>
+                                                </cells>
+                                            </ColumnListItem>
+                                        </items>
+                                    </Table>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>                    
+                </uxap:sections>
+
+            </uxap:ObjectPageLayout>   
+<!---->
+
         </content>
     </Page>
 </mvc:View>
