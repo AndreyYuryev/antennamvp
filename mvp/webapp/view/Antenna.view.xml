@@ -12,57 +12,6 @@
         showNavButton="true"
 	    navButtonPress="onNavBack">
         <content>
-<!--
-            <f:Form 
-                id="idAntennaForm"
-                editable="true">
-                <f:title>
-                    <core:Title text="{i18n>FormAntennaTitle}"/>
-                </f:title>
-                <f:layout>
-                    <f:ResponsiveGridLayout 
-                        labelSpanXL="4"
-                        labelSpanL="4"
-                        labelSpanM="4"
-                        labelSpanS="8"
-                        adjustLabelSpan="true"
-                        emptySpanXL="0"
-                        emptySpanL="0"
-                        emptySpanM="0"
-                        emptySpanS="0"
-                        columnsXL="2"
-                        columnsL="2"
-                        columnsM="1"
-                        singleContainerFullSize="false"/>
-                </f:layout>
-                <f:formContainers>
-                    <f:FormContainer >
-                        <f:formElements>
-                            <f:FormElement label="{i18n>Antnfld1}" >
-                                <f:fields>
-                                    <Input value="{local>/Antennafiltered/0/Antennenhersteller}" id="idfld1"/>
-                                </f:fields>
-                            </f:FormElement>
-                            <f:FormElement label="{i18n>Antnfld2}">
-                                <f:fields>
-                                    <Input value="{local>/Antennafiltered/0/Seriennummer}" id="idfld2"/>
-                                </f:fields>
-                            </f:FormElement>
-                            <f:FormElement label="{i18n>Antnfld3}">
-                                <f:fields>
-                                    <Input value="{local>/Antennafiltered/0/Antennenport}" id="idfld3"/>
-                                </f:fields>
-                            </f:FormElement>
-                            <f:FormElement label="{i18n>Antnfld4}">
-                                <f:fields>
-                                    <Input value="{local>/Antennafiltered/0/Polarisation}" id="idfld4"/>
-                                </f:fields>
-                            </f:FormElement>
-                        </f:formElements>
-                    </f:FormContainer>
-                </f:formContainers>                
-            </f:Form>
--->
 
 <!---->
             <uxap:ObjectPageLayout id="ObjPGLid">
@@ -77,8 +26,6 @@
                 <uxap:headerContent>
                     <ObjectAttribute title="Standortkennung" text="{local>/Protokollitemsfiltered/0/Standortkennung}" />
 					<ObjectAttribute title="Standortname" text="{local>/Protokollitemsfiltered/0/Standortname}" />
-
-
                 </uxap:headerContent>
 
                 <uxap:sections>
@@ -113,22 +60,37 @@
                                                 <f:formElements>
                                                     <f:FormElement label="{i18n>Antnfld1}" >
                                                         <f:fields>
-                                                            <Input value="{local>/Antennafiltered/0/Antennenhersteller}" id="idfld1"/>
+                                                            <Text text="{local>/Antennafiltered/0/Antennenhersteller}" id="idfld1"/>
                                                         </f:fields>
                                                     </f:FormElement>
                                                     <f:FormElement label="{i18n>Antnfld2}">
                                                         <f:fields>
-                                                            <Input value="{local>/Antennafiltered/0/Seriennummer}" id="idfld2"/>
+                                                            <Text text="{local>/Antennafiltered/0/Seriennummer}" id="idfld2"/>
                                                         </f:fields>
                                                     </f:FormElement>
                                                     <f:FormElement label="{i18n>Antnfld3}">
                                                         <f:fields>
-                                                            <Input value="{local>/Antennafiltered/0/Antennenport}" id="idfld3"/>
+                                                            <Text text="{local>/Antennafiltered/0/Antennenport}" id="idfld3"/>
                                                         </f:fields>
                                                     </f:FormElement>
                                                     <f:FormElement label="{i18n>Antnfld4}">
                                                         <f:fields>
-                                                            <Input value="{local>/Antennafiltered/0/Polarisation}" id="idfld4"/>
+                                                            <Text text="{local>/Antennafiltered/0/Polarisation}" id="idfld4"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld5}">
+                                                        <f:fields>
+                                                            <Text text="{local>/Antennafiltered/0/Absenkung elektrisch(RET)}" id="idfld5"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld6}">
+                                                        <f:fields>
+                                                            <Text text="{local>/Antennafiltered/0/Absenkung mechanisch}" id="idfld6"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld7}">
+                                                        <f:fields>
+                                                            <Text text="{local>/Antennafiltered/0/Schwerpunkthöhe}" id="idfld7"/>
                                                         </f:fields>
                                                     </f:FormElement>
                                                 </f:formElements>

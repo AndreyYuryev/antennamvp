@@ -85,7 +85,19 @@ sap.ui.define([
                     protokolid: oObject.ProtokollID,
                     antennaid: oObject.AntenneID,
                 });
-            }            
+            },
+            
+            onEditPress: function(oEvent) {
+
+            },
+
+            onSavePress: function(oEvent) {
+
+            },
+
+            onCancelPress: function(oEvent) {
+                
+            }
 
         });
     });

@@ -10,7 +10,19 @@
         id="idProtocolPage" 
         title="{i18n>ProtocolTitle}"
         showNavButton="true"
-	    navButtonPress="onNavBack">
+	    navButtonPress="onNavBack"
+        showHeader="true">
+        <customHeader>
+            <Bar>
+                <contentRight>
+                    <Button id="edit" text="Edit" enabled="false" press="onEditPress"/>
+                    <Button id="save" text="Save" type="Emphasized" visible="false" press="onSavePress"/>
+                    <Button id="cancel" text="Cancel" visible="false" press="onCancelPress"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        
+
         <content>
         <!-- head info -->
             <f:Form id="idProtocolForm" 
