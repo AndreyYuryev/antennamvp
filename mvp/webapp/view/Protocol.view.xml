@@ -15,18 +15,16 @@
         <customHeader>
             <Bar>
                 <contentRight>
-                    <Button id="edit" text="Edit" enabled="false" press="onEditPress"/>
+                    <Button id="edit" text="Edit" enabled="true" press="onEditPress"/>
                     <Button id="save" text="Save" type="Emphasized" visible="false" press="onSavePress"/>
                     <Button id="cancel" text="Cancel" visible="false" press="onCancelPress"/>
                 </contentRight>
             </Bar>
         </customHeader>
-        
-
         <content>
         <!-- head info -->
             <f:Form id="idProtocolForm" 
-                    editable="false">
+                    editable="true">
                 <f:title>
                     <core:Title id="idCoreTitle" text="{i18n>FormProtocolTitle} {local>/Protokollitemsfiltered/0/Datum}"/>
                 </f:title>
@@ -47,7 +45,7 @@
                         singleContainerFullSize="false"/>
                 </f:layout>
                 <f:formContainers>
-                    <f:FormContainer >
+                    <f:FormContainer id="idFormTextL">
                         <f:formElements>
                             <f:FormElement label="{i18n>PrtclfldL1}">
                                 <f:fields>
@@ -71,7 +69,31 @@
                             </f:FormElement>                            
                         </f:formElements>
                     </f:FormContainer>
-                    <f:FormContainer >
+                    <f:FormContainer id="idFormInputL" visible="false">
+                        <f:formElements>
+                            <f:FormElement label="{i18n>PrtclfldL1}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Standortkennung}" id="idfldL1i"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldL2}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Standortname}" id="idfldL2i"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldL3}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Straße}" id="idfldL3i"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldL4}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/PLZ} / {local>/Protokollitemsfiltered/0/Ort}" id="idfldL4i"/>
+                                </f:fields>
+                            </f:FormElement>                            
+                        </f:formElements>
+                    </f:FormContainer>                    
+                    <f:FormContainer id="idFormTextR">
                         <f:formElements>
                             <f:FormElement label="{i18n>PrtclfldR1}">
                                 <f:fields>
@@ -95,9 +117,33 @@
                             </f:FormElement>                                   
                         </f:formElements>
                     </f:FormContainer>
+                    <f:FormContainer id="idFormInputR" visible="false">
+                        <f:formElements>
+                            <f:FormElement label="{i18n>PrtclfldR1}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Messmittel}" id="idfldR1i"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldR2}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Messdatum}" id="idfldR2i"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldR3}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Aufbaufirma}" id="idfldR3i"/>
+                                </f:fields>
+                            </f:FormElement>                     
+                            <f:FormElement label="{i18n>PrtclfldR4}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Name}" id="idfldR4i"/>
+                                </f:fields>
+                            </f:FormElement>                                   
+                        </f:formElements>
+                    </f:FormContainer>                    
                 </f:formContainers>
                 <f:formContainers>
-                    <f:FormContainer >
+                    <f:FormContainer id="idFormTextB">
                         <f:formElements>
                             <f:FormElement label="{i18n>PrtclfldB1}">
                                 <f:fields>
@@ -111,9 +157,24 @@
                             </f:FormElement>                            
                         </f:formElements>
                     </f:FormContainer>                
+                    <f:FormContainer id="idFormInputB" visible="false">
+                        <f:formElements>
+                            <f:FormElement label="{i18n>PrtclfldB1}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Band}" id="idfldB1i"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="{i18n>PrtclfldB2}">
+                                <f:fields>
+                                    <Input value="{local>/Protokollitemsfiltered/0/Konf}" id="idfldB2i"/>
+                                </f:fields>
+                            </f:FormElement>                            
+                        </f:formElements>
+                    </f:FormContainer>                                    
                 </f:formContainers>
             </f:Form>
-
+            <!-- head info end -->
+            <!-- content -->
             <Table 
                 id="idAntenneTable"
                 items="{local>/Antennafiltered}"
@@ -150,6 +211,7 @@
                     </ColumnListItem>
                 </items>
             </Table>
+            <!-- content end -->
         </content>
     </Page>
 </mvc:View>

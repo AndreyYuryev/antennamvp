@@ -66,8 +66,6 @@ sap.ui.define([
 
             },
 
-
-
             onNavBack: function() {
                 let oHistory = History.getInstance();
                 let sPreviousHash = oHistory.getPreviousHash();
@@ -88,15 +86,36 @@ sap.ui.define([
             },
             
             onEditPress: function(oEvent) {
-
+                let oModel = this.getView().getModel("local");
+                this._oHead = oModel.getProperty('/Protokollitemsfiltered/0');
+                this._oKopf = Object.assign({}, this._oHead);
+                this._toggleButtons(true);
             },
 
             onSavePress: function(oEvent) {
-
+                this._toggleButtons(false);
             },
 
             onCancelPress: function(oEvent) {
-                
+                let oModel = this.getView().getModel("local");
+                oModel.setProperty('/Protokollitemsfiltered/0', this._oKopf);
+
+                this._toggleButtons(false);                
+            },
+
+            _toggleButtons: function (bEdit){
+                let oView = this.getView();
+                oView.byId("edit").setVisible(!bEdit);
+                oView.byId("save").setVisible(bEdit);
+                oView.byId("cancel").setVisible(bEdit);
+
+                oView.byId("idFormTextL").setVisible(!bEdit);                
+                oView.byId("idFormInputL").setVisible(bEdit);   
+                oView.byId("idFormTextR").setVisible(!bEdit);                
+                oView.byId("idFormInputR").setVisible(bEdit);   
+                oView.byId("idFormTextB").setVisible(!bEdit);                
+                oView.byId("idFormInputB").setVisible(bEdit);                   
+
             }
 
         });

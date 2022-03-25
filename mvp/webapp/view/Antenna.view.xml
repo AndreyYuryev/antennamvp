@@ -15,14 +15,17 @@
 
 <!---->
             <uxap:ObjectPageLayout id="ObjPGLid">
+                    <!--
                 <uxap:headerTitle>
                     <uxap:ObjectPageDynamicHeaderTitle >
+
                 	<uxap:actions>
 					    <Button text="Edit" type="Emphasized"/>
-					    <Button text="Exit"/>
 				    </uxap:actions>
+
                     </uxap:ObjectPageDynamicHeaderTitle>
                 </uxap:headerTitle>
+                -->
                 <uxap:headerContent>
                     <ObjectAttribute title="Standortkennung" text="{local>/Protokollitemsfiltered/0/Standortkennung}" />
 					<ObjectAttribute title="Standortname" text="{local>/Protokollitemsfiltered/0/Standortname}" />
@@ -56,7 +59,12 @@
                                                 singleContainerFullSize="false"/>
                                         </f:layout>
                                         <f:formContainers>
-                                            <f:FormContainer >
+                                            <f:FormContainer id="idFormText" visible="true">
+                                                <f:toolbar>
+                                                    <Toolbar >
+                                                        <Button text="Edit" icon="sap-icon://edit" id="edit" press="onEditPress" />
+                                                   </Toolbar>
+                                                </f:toolbar>
                                                 <f:formElements>
                                                     <f:FormElement label="{i18n>Antnfld1}" >
                                                         <f:fields>
@@ -95,6 +103,51 @@
                                                     </f:FormElement>
                                                 </f:formElements>
                                             </f:FormContainer>
+                                            <f:FormContainer id="idFormInput" visible="false">
+                                                <f:toolbar>
+                                                    <Toolbar >
+                                                        <Button text="Accept" icon="sap-icon://accept" id="accept" press="onAcceptPress" />
+                                                        <Button text="Cancel" icon="sap-icon://cancel" id="cancel" press="onCancelPress" />
+                                                   </Toolbar>
+                                                </f:toolbar>
+                                                <f:formElements>
+                                                    <f:FormElement label="{i18n>Antnfld1}" >
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Antennenhersteller}" id="idfld1i"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld2}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Seriennummer}" id="idfld2i"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld3}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Antennenport}" id="idfld3i"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld4}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Polarisation}" id="idfld4i"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld5}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Absenkung elektrisch(RET)}" id="idfld5i"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld6}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Absenkung mechanisch}" id="idfld6i"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                    <f:FormElement label="{i18n>Antnfld7}">
+                                                        <f:fields>
+                                                            <Input value="{local>/Antennafiltered/0/Schwerpunkthöhe}" id="idfld7i"/>
+                                                        </f:fields>
+                                                    </f:FormElement>
+                                                </f:formElements>
+                                            </f:FormContainer>                                            
                                         </f:formContainers>                
                                     </f:Form>
                                 <!--

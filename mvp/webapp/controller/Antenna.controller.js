@@ -69,8 +69,6 @@ sap.ui.define([
 */
             },
 
-
-
             onNavBack: function() {
                 let oHistory = History.getInstance();
                 let sPreviousHash = oHistory.getPreviousHash();
@@ -80,6 +78,35 @@ sap.ui.define([
                 } else {
                     this.getOwnerComponent().getRouter().navTo("RouteProtocol", {}, true);
                 }
-            }
+            },
+
+            onEditPress: function(oEvent) {
+                let oModel = this.getView().getModel("local");
+                this._oAntennaf = oModel.getProperty('/Antennafiltered/0');
+                this._oAntenna = Object.assign({}, this._oAntennaf);
+                this._toggleButtonsA(true);
+            },
+
+            onAcceptPress: function(oEvent) {
+                this._toggleButtonsA(false);
+            },
+
+            onCancelPress: function(oEvent) {
+                let oModel = this.getView().getModel("local");
+                oModel.setProperty('/Antennafiltered/0', this._oAntenna);
+
+                this._toggleButtonsA(false);                
+            },
+
+            _toggleButtonsA: function (bEdit){
+                let oView = this.getView();
+                oView.byId("edit").setVisible(!bEdit);
+                oView.byId("cancel").setVisible(bEdit);
+                oView.byId("accept").setVisible(bEdit);
+
+                oView.byId("idFormText").setVisible(!bEdit);                
+                oView.byId("idFormInput").setVisible(bEdit);   
+            }            
+
         });
     });
