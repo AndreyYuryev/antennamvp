@@ -65,6 +65,40 @@
         "AntenneID": "0002",
         "Sector":"2",
         "ProtokollID": "0001"
+      },
+      {
+        "Hauptstrahlrichtung": "",
+        "Frequenzband": "",
+        "Antennenhersteller": "Cisco",
+        "Antennentyp": "",
+        "Seriennummer": "I0J0578781",
+        "Antennenport": "Rr1",
+        "Polarisation": "+30°",
+        "Absenkung elektrisch(RET)": "",
+        "Absenkung mechanisch": "",
+        "Schwerpunkthöhe": "",
+        "Tageskennzeichnung": "",
+        "Antennenfarbe": "",
+        "AntenneID": "0003",
+        "Sector":"3",
+        "ProtokollID": "0001"
+      },
+      {
+        "Hauptstrahlrichtung": "",
+        "Frequenzband": "",
+        "Antennenhersteller": "Cisco",
+        "Antennentyp": "",
+        "Seriennummer": "I0J0578775",
+        "Antennenport": "Rr1",
+        "Polarisation": "-30°",
+        "Absenkung elektrisch(RET)": "",
+        "Absenkung mechanisch": "",
+        "Schwerpunkthöhe": "",
+        "Tageskennzeichnung": "",
+        "Antennenfarbe": "",
+        "AntenneID": "0004",
+        "Sector":"4",
+        "ProtokollID": "0001"
       }
     ],
     "RET": [

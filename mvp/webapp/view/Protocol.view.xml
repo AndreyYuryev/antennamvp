@@ -9,11 +9,13 @@
     <Page 
         id="idProtocolPage" 
         title="{i18n>ProtocolTitle}"
-        showNavButton="true"
-	    navButtonPress="onNavBack"
         showHeader="true">
+        <!---->
         <customHeader>
             <Bar>
+                <contentLeft>
+                    <Button id="back" press="onNavBack" icon="sap-icon://nav-back" />
+                </contentLeft>
                 <contentRight>
                     <Button id="edit" text="Edit" enabled="true" press="onEditPress"/>
                     <Button id="save" text="Save" type="Emphasized" visible="false" press="onSavePress"/>
@@ -21,6 +23,7 @@
                 </contentRight>
             </Bar>
         </customHeader>
+        <!---->
         <content>
         <!-- head info -->
             <f:Form id="idProtocolForm" 
